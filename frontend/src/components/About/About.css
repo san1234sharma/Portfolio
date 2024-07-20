@@ -1,0 +1,102 @@
+.about{
+    background-color: hsl(219, 48%, 8%);
+    min-height: 100vh;
+    display: flex;
+}
+
+.aboutcontainer{
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 70vh;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    padding: 2vmax;
+    box-sizing: border-box;
+}
+
+.aboutcontainer > p{
+    text-align: right;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    line-height: 60px;
+    color: rgba(15, 15, 15, 0.822);
+    font-size: 1.5vmax;
+    width: 30%;
+}
+
+.aboutcontainer2{
+    width: 60%;
+    min-height: 80vh;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.281);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 2vmax;
+    display: flex;
+    transform: translateX(-100vw) translateY(-10%) rotate(360deg);
+    animation: aboutanimation 1s ease-in forwards;
+}
+
+.aboutcontainer2 > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax;
+    color: rgba(17, 17, 17, 0.712);
+    box-sizing: border-box;
+}
+
+.aboutcontainer2 > div:first-child{
+    align-items: center;
+}
+
+.aboutavatar{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    transition: all 1s;
+}
+
+.aboutavatar:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+}
+
+@keyframes aboutanimation{
+    to{
+    transform: translateX(20%) translate(-10%);
+    }
+}
+
+@keyframes aboutanimationphone{
+    to{
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        align-items: flex-end;
+    }
+    .aboutcontainer{
+        width: 100%;
+        display: none;
+    }
+    .aboutcontainer2{
+        width: 100%;
+        position: relative;
+        flex-direction: column;
+        animation: aboutanimationphone 1s ease-in forwards;
+    }
+    .aboutcontainer2 > div:last-child > p{
+        text-align: center !important;
+    }
+    .aboutavatar{
+        width: 100px;
+        height: 100px;
+        transform: translateY(-80%);
+    }
+}

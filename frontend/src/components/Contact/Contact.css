@@ -1,0 +1,90 @@
+.contact{
+    background-color: hsl(219, 48%, 8%);
+    width: 100%;
+    height: 100vh;
+}
+.contactrightbar{
+    background-image: linear-gradient(to bottom,hsl(250,100%,75%),white);
+    width: 30%;
+    height: inherit;
+    animation: contactformanimation 1s linear forwards;
+    position: absolute;
+    right: 0;
+}
+.contactcontainer{
+    height: 80%;
+    width: 70%;
+    background-color: white;
+    position: absolute;
+    border-radius: 100px 0 0 100px;
+    transform: translateX(20%) translateY(-50%);
+    top: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+    display: flex;
+    justify-content: center;
+    animation: contacttransition 1s linear forwards;
+}
+.contactcontainerform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.contactcontainerform > h4{
+    text-align: center;
+    margin: 1vmax;
+}
+
+.contactcontainerform > input,
+.contactcontainerform > textarea{
+    padding: 1vmax;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: "Roboto";
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    transform: translateX(-100vw);
+    animation: contactforminput 1s ease-in-out forwards 0.5s;
+}
+
+.contactcontainerform > button {
+    background-color: hsl(250, 100%, 75%);
+    transform: translateY(-100vh);
+    animation: contactformbtn 1s ease-in-out forwards 1s;
+}
+
+.contactcontainerform > button:hover{
+    background-color: hsl(219, 48%, 8%);
+}
+@keyframes contacttransition{
+    from{
+        transform: translateX(-100%) translateY(-50%);
+    }
+    to{
+        transform: translateX(20%) translateY(-50%);
+    }
+}
+@keyframes contactformanimation{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes contactformbtn{
+    from{
+        transform: translateY(-100vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes contactforminput{
+    from{
+        transform: translateX(-100vw);
+    }
+    to{
+        transform: translateX(0);
+    }
+}

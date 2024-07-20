@@ -1,0 +1,27 @@
+.boeingcard{
+    width: 300px;
+    transition: all 0.5s;
+    padding: 1vmax;
+    margin: 2vmax;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.boeingcard > a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.712);
+    width: inherit;
+}
+.boeingcard img{
+    width: inherit;
+}
+.boeingcard:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
+}
+
+@media screen and (max-width:600px){
+    .boeingcard{
+        width: 200px;
+    }
+}
